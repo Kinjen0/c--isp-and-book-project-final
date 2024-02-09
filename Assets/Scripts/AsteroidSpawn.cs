@@ -10,13 +10,12 @@ public class AsteroidSpawn : MonoBehaviour
 
     public GameObject asteroidPrefab;
 
-    // Timer to be used later when I want them to spawn every few seconds
-    private Time timeSinceLastSpawn;
 
     // numbers for the range, so that it can be set per level
     public int min;
     public int max;
     public int height;
+    // Timers to manage the spawning of asteroids, one every second
     private float spawnTimer = 1f;
     private float spawnCooldown = 0f;
 
@@ -24,7 +23,7 @@ public class AsteroidSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Whenever I press space, spawn an asteroid within the bounds I set for the level
+        // When the spawncool down reaches zero, we get a new random location, then create an asteroid there and reset the spawn cooldown
         if(spawnCooldown <= 0)
         {
             Vector3 randomLocation = new Vector3(Random.Range(min, max), height, Random.Range(min, max));

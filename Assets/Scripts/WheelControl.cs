@@ -5,6 +5,7 @@ using UnityEngine;
 /* Wes
  * all of the Code came from the wheel collider docs
  * https://docs.unity3d.com/Manual/WheelColliderTutorial.html
+ * This class will take control of the cars wheels, and allow us to match them to the car in terms of spin and rotation
  * */
 
 

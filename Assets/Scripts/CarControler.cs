@@ -9,6 +9,7 @@ using System;
  * https://docs.unity3d.com/Manual/WheelColliderTutorial.html
  * Additionally, I made use of the particle system docs to create the exausts
  * https://docs.unity3d.com/ScriptReference/ParticleSystem.html
+ * This class is meant to control the player, and allow for car like movement. 
  * */
 
 public class CarControler : MonoBehaviour

@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// This should play a sound whenever an obsticle is hit by the player
 public class ObsticalControler : MonoBehaviour
 {
     public AudioSource audio;
-    // Start is called before the first frame update
     void Start()
     {
         audio = GetComponent<AudioSource>();

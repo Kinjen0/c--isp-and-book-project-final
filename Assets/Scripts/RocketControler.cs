@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This class will take control of the rockets themselves, and manage the state of them between boosting and not boosting
 public class RocketControler : MonoBehaviour
 {
     Animator animator;
@@ -43,15 +44,17 @@ public class RocketControler : MonoBehaviour
 
     }
 
+    // coroutine to stop the boosting animation after 3 seconds
     IEnumerator StopBoosting()
     {
         yield return new WaitForSeconds(3f);
         animator.SetBool("isBoosting", false);
 
-        Debug.Log("Boosting has ended");
+        //Debug.Log("Boosting has ended");
         exaust.Stop();
         rocketEffect.Stop();
     }
+    // Routine to start the boosting a second after the player presses space. This gives time for the animation to finish, and the rockets to get into position
     IEnumerator StartBoosting()
     {
         yield return new WaitForSeconds(1f);
